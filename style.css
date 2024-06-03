@@ -1,0 +1,362 @@
+/* Path: index.html */
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header img {
+    max-height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff69b4;
+}
+
+header button {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: #ff1493;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+}
+
+.landing-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.landing-text {
+    max-width: 500px;
+}
+
+.landing-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ff69b4;
+}
+
+.landing-text p {
+    margin-bottom: 1.5rem;
+}
+
+.landing-text button {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.landing-text button:hover {
+    background-color: #ff1493;
+}
+
+.landing-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-part,
+.services-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.about-text,
+.services-text {
+    max-width: 500px;
+}
+
+.about-text h2,
+.services-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff69b4;
+}
+
+.about-image img,
+.services-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-part {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff69b4;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ff1493;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+/* Path: login.html */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sedan+SC&display=swap');
+
+.login-page {
+    height: 95vh;
+    outline: auto;
+    text-align: center;
+    padding: 120px;
+    background-size: cover;
+    background-image: url(image.png);
+}
+
+.login-page .login-box {
+    width: 320px;
+    height: 420px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff69b4;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+.login-box button {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin-top: ;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+    background-color: #ff1493;
+}
+
+.login-box a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.login-box a:hover {
+    color: #ff69b4;
+}
+
+.login-box p {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+.login{ 
+    font-family: "Sedan SC", serif;
+  }
+/* Path: register.html */
+
+.register{
+  font-family: "Sedan SC", serif;
+}
+.register-page{
+    
+        height: 100vh;
+        outline: auto;
+        text-align: center;
+        padding: 120px;
+        background-size: cover;
+        background-image: url(image.png);
+}
+.register-page .register-box {
+    width: 320px;
+    height: 420px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.register-box button {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin-top: ;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+input[type="text"],
+input[type="text"],
+input[type="text"],
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* Path: quiz.html */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Satisfy&family=Sedan+SC&display=swap');
+.welcomes{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.quizpara{
+    font-size: 15px;
+   text-align: center;
+}
+.skinbutton{
+    text-align: center;
+    text-decoration-color: #d85998;
+}
+.quizsubmit{
+    
+    text-align: center;
+}
+
+/* Path:firstpage.html */
+.firstpage{
+    height: 100vh;
+    background-color: black;
+}
+.weblogo{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    
+}
+
+
+
+
