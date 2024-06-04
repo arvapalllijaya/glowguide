@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    window.addEventListener('load', function () {
-        window.location.href = 'index.html';
-    });
-
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
