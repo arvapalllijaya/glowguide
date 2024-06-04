@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Smooth scrolling for navigation links
+    window.addEventListener('load', function () {
+        window.location.href = 'index.html';
+    });
+
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();

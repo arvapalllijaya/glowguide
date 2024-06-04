@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+.loader-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 body {
     font-family: 'Lora', serif;
     background-color: #FEFCF3;
