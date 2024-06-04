@@ -12,168 +12,213 @@
     <header>
         <h1 class="welcome-message">Welcome, username!</h1>
     </header>
-    <main class="container">
-        <section class="intro">
-            <p>Say goodbye to guesswork and endless product searches – let us be your trusted skincare companion on the
-                path to glowing, confident skin.</p>
-        </section>
-        <section class="start-button">
-            <h2>Take our skin type quiz &rightarrow;</h2>
-        </section>
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <section class="carousel-item intro active">
+                <p>Say goodbye to guesswork and endless product searches – let us be your trusted skincare companion on
+                    the
+                    path to glowing, confident skin.</p>
+                <button class="next-button">Start Quiz &rightarrow;</button>
 
-        <form class="quiz">
-            <fieldset>
-                <legend>1. How does your skin feel after washing your face with a gentle cleanser?</legend>
-                <input type="radio" name="que1" id="que1a" value="a) Tight and dry">
-                <label for="que1a">a) Tight and dry</label><br>
-                <input type="radio" name="que1" id="que1b" value="b) Balanced, neither dry nor oily">
-                <label for="que1b">b) Balanced, neither dry nor oily</label><br>
-                <input type="radio" name="que1" id="que1c" value="c) Oily or greasy">
-                <label for="que1c">c) Oily or greasy</label><br>
-                <input type="radio" name="que1" id="que1d" value="d) Dry in some areas, oily in others">
-                <label for="que1d">d) Dry in some areas, oily in others</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>2. How often do you experience flakiness or peeling on your face?</legend>
-                <input type="radio" name="que2" id="que2a" value="a) Often">
-                <label for="que2a">a) Often</label><br>
-                <input type="radio" name="que2" id="que2b" value="b) Rarely">
-                <label for="que2b">b) Rarely</label><br>
-                <input type="radio" name="que2" id="que2c" value="c) Never">
-                <label for="que2c">c) Never</label><br>
-                <input type="radio" name="que2" id="que2d" value="d) Sometimes, in specific areas">
-                <label for="que2d">d) Sometimes, in specific areas</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>3. How would you describe the size of your pores?</legend>
-                <input type="radio" name="que3" id="que3a" value="a) Small and barely visible">
-                <label for="que3a">a) Small and barely visible</label><br>
-                <input type="radio" name="que3" id="que3b" value="b) Medium-sized">
-                <label for="que3b">b) Medium-sized</label><br>
-                <input type="radio" name="que3" id="que3c" value="c) Large and visible">
-                <label for="que3c">c) Large and visible</label><br>
-                <input type="radio" name="que3" id="que3d" value="d) Large in some areas, small in others">
-                <label for="que3d">d) Large in some areas, small in others</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>4. How often does your face appear shiny or oily, especially in the T-zone (forehead, nose, and
-                    chin)?</legend>
-                <input type="radio" name="que4" id="que4a" value="a) Rarely or never">
-                <label for="que4a">a) Rarely or never</label><br>
-                <input type="radio" name="que4" id="que4b" value="b) Occasionally">
-                <label for="que4b">b) Occasionally</label><br>
-                <input type="radio" name="que4" id="que4c" value="c) Often">
-                <label for="que4c">c) Often</label><br>
-                <input type="radio" name="que4" id="que4d" value="d) Only in the T-zone">
-                <label for="que4d">d) Only in the T-zone</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>5. Do you often feel the need to reapply moisturizer throughout the day?</legend>
-                <input type="radio" name="que5" id="que5a" value="a) Yes, frequently">
-                <label for="que5a">a) Yes, frequently</label><br>
-                <input type="radio" name="que5" id="que5b" value="b) No, once is enough">
-                <label for="que5b">b) No, once is enough</label><br>
-                <input type="radio" name="que5" id="que5c" value="c) No, I don’t use moisturizer">
-                <label for="que5c">c) No, I don’t use moisturizer</label><br>
-                <input type="radio" name="que5" id="que5d" value="d) Only in certain areas">
-                <label for="que5d">d) Only in certain areas</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>6. How does your skin react to weather changes, such as cold and dry or hot and humid
-                    conditions?</legend>
-                <input type="radio" name="que6" id="que6a" value="a) Becomes very dry and tight">
-                <label for="que6a">a) Becomes very dry and tight</label><br>
-                <input type="radio" name="que6" id="que6b" value="b) Stays relatively the same">
-                <label for="que6b">b) Stays relatively the same</label><br>
-                <input type="radio" name="que6" id="que6c" value="c) Becomes more oily">
-                <label for="que6c">c) Becomes more oily</label><br>
-                <input type="radio" name="que6" id="que6d"
-                    value="d) Varies, dry in cold weather and oily in hot weather">
-                <label for="que6d">d) Varies, dry in cold weather and oily in hot weather</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>7. How often do you experience breakouts or acne?</legend>
-                <input type="radio" name="que7" id="que7a" value="a) Rarely or never">
-                <label for="que7a">a) Rarely or never</label><br>
-                <input type="radio" name="que7" id="que7b" value="b) Occasionally">
-                <label for="que7b">b) Occasionally</label><br>
-                <input type="radio" name="que7" id="que7c" value="c) Often">
-                <label for="que7c">c) Often</label><br>
-                <input type="radio" name="que7" id="que7d" value="d) Frequently, especially in specific areas">
-                <label for="que7d">d) Frequently, especially in specific areas</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>8. How does your skin feel by the end of the day without any touch-ups?</legend>
-                <input type="radio" name="que8" id="que8a" value="a) Dry and possibly flaky">
-                <label for="que8a">a) Dry and possibly flaky</label><br>
-                <input type="radio" name="que8" id="que8b" value="b) Normal, no significant changes">
-                <label for="que8b">b) Normal, no significant changes</label><br>
-                <input type="radio" name="que8" id="que8c" value="c) Very oily and shiny">
-                <label for="que8c">c) Very oily and shiny</label><br>
-                <input type="radio" name="que8" id="que8d" value="d) Oily in some areas, dry in others">
-                <label for="que8d">d) Oily in some areas, dry in others</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>9. When you apply makeup, how well does it stay on throughout the day?</legend>
-                <input type="radio" name="que9" id="que9a" value="a) It often looks patchy or cakey">
-                <label for="que9a">a) It often looks patchy or cakey</label><br>
-                <input type="radio" name="que9" id="que9b" value="b) Stays on well">
-                <label for="que9b">b) Stays on well</label><br>
-                <input type="radio" name="que9" id="que9c" value="c) Becomes shiny and needs blotting or powder">
-                <label for="que9c">c) Becomes shiny and needs blotting or powder</label><br>
-                <input type="radio" name="que9" id="que9d" value="d) Wears off unevenly in different areas">
-                <label for="que9d">d) Wears off unevenly in different areas</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>10. How sensitive is your skin to new skincare products?</legend>
-                <input type="radio" name="que10" id="que10a" value="a) Very sensitive, reacts easily">
-                <label for="que10a">a) Very sensitive, reacts easily</label><br>
-                <input type="radio" name="que10" id="que10b" value="b) Generally tolerant">
-                <label for="que10b">b) Generally tolerant</label><br>
-                <input type="radio" name="que10" id="que10c" value="c) Rarely reacts">
-                <label for="que10c">c) Rarely reacts</label><br>
-                <input type="radio" name="que10" id="que10d" value="d) Sensitive in some areas, tolerant in others">
-                <label for="que10d">d) Sensitive in some areas, tolerant in others</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>11. How does your skin feel in the morning before any skincare products are applied?</legend>
-                <input type="radio" name="que11" id="que11a" value="a) Dry and possibly tight">
-                <label for="que11a">a) Dry and possibly tight</label><br>
-                <input type="radio" name="que11" id="que11b" value="b) Normal">
-                <label for="que11b">b) Normal</label><br>
-                <input type="radio" name="que11" id="que11c" value="c) Oily">
-                <label for="que11c">c) Oily</label><br>
-                <input type="radio" name="que11" id="que11d" value="d) Dry in some areas, oily in others">
-                <label for="que11d">d) Dry in some areas, oily in others</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>12. Do you experience redness or irritation frequently?</legend>
-                <input type="radio" name="que12" id="que12a" value="a) Yes, often">
-                <label for="que12a">a) Yes, often</label><br>
-                <input type="radio" name="que12" id="que12b" value="b) No, rarely">
-                <label for="que12b">b) No, rarely</label><br>
-                <input type="radio" name="que12" id="que12c" value="c) Occasionally">
-                <label for="que12c">c) Occasionally</label><br>
-                <input type="radio" name="que12" id="que12d" value="d) Only in certain areas">
-                <label for="que12d">d) Only in certain areas</label>
-            </fieldset>
-
-            <section class="submit-button">
-                <button class="quiz-submit" type="submit">SUBMIT!</button>
             </section>
-        </form>
-    </main>
+            <section class="carousel-item start-quiz">
+                <h2>Take our skin type quiz &rightarrow;</h2>
+                <button class="start-quiz-button">Let's Start</button>
+            </section>
+
+            <form class="quiz" novalidate>
+                <fieldset>
+                    <legend>1. How does your skin feel after washing your face with a gentle cleanser?</legend>
+                    <div class="error-message">Please choose an option</div>
+                    <label for="que1a"><input type="radio" name="que1" id="que1a" value="a) Tight and dry"> a) Tight and
+                        dry</label><br>
+                    <label for="que1b"><input type="radio" name="que1" id="que1b"
+                            value="b) Balanced, neither dry nor oily">
+                        b) Balanced, neither dry nor oily</label><br>
+                    <label for="que1c"><input type="radio" name="que1" id="que1c" value="c) Oily or greasy"> c) Oily or
+                        greasy</label><br>
+                    <label for="que1d"><input type="radio" name="que1" id="que1d"
+                            value="d) Dry in some areas, oily in others"> d) Dry in some areas, oily in others</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. How often do you experience flakiness or peeling on your face?</legend>
+                    <div class="error-message">Please choose an option</div>
+                    <label for="que2a"><input type="radio" name="que2" id="que2a" value="a) Often"> a) Often</label><br>
+                    <label for="que2b"><input type="radio" name="que2" id="que2b" value="b) Rarely"> b)
+                        Rarely</label><br>
+                    <label for="que2c"><input type="radio" name="que2" id="que2c" value="c) Never"> c) Never</label><br>
+                    <label for="que2d"><input type="radio" name="que2" id="que2d"
+                            value="d) Sometimes, in specific areas">
+                        d) Sometimes, in specific areas</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. How would you describe the size of your pores?</legend>
+                    <div class="error-message">Please choose an option</div>
+                    <label for="que3a"><input type="radio" name="que3" id="que3a" value="a) Small and barely visible">
+                        a)
+                        Small and barely visible</label><br>
+                    <label for="que3b"><input type="radio" name="que3" id="que3b" value="b) Medium-sized"> b)
+                        Medium-sized</label><br>
+                    <label for="que3c"><input type="radio" name="que3" id="que3c" value="c) Large and visible"> c) Large
+                        and
+                        visible</label><br>
+                    <label for="que3d"><input type="radio" name="que3" id="que3d"
+                            value="d) Large in some areas, small in others"> d) Large in some areas, small in
+                        others</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. How often does your face appear shiny or oily, especially in the T-zone (forehead, nose,
+                        and
+                        chin)?</legend>
+                        <div class="error-message">Please choose an option</div>
+                        <label for="que4a"><input type="radio" name="que4" id="que4a" value="a) Rarely or never"> a) Rarely
+                        or
+                        never</label><br>
+                    <label for="que4b"><input type="radio" name="que4" id="que4b" value="b) Occasionally"> b)
+                        Occasionally</label><br>
+                    <label for="que4c"><input type="radio" name="que4" id="que4c" value="c) Often"> c) Often</label><br>
+                    <label for="que4d"><input type="radio" name="que4" id="que4d" value="d) Only in the T-zone"> d) Only
+                        in
+                        the T-zone</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>5. Do you often feel the need to reapply moisturizer throughout the day?</legend>
+                    <div class="error-message">Please choose an option</div>
+                    <label for="que5a"><input type="radio" name="que5" id="que5a" value="a) Yes, frequently"> a) Yes,
+                        frequently</label><br>
+                    <label for="que5b"><input type="radio" name="que5" id="que5b" value="b) No, once is enough"> b) No,
+                        once
+                        is enough</label><br>
+                    <label for="que5c"><input type="radio" name="que5" id="que5c"
+                            value="c) No, I don’t use moisturizer"> c)
+                        No, I don’t use moisturizer</label><br>
+                    <label for="que5d"><input type="radio" name="que5" id="que5d" value="d) Only in certain areas"> d)
+                        Only
+                        in certain areas</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>6. How does your skin react to weather changes, such as cold and dry or hot and humid
+                        conditions?</legend>
+                        <div class="error-message">Please choose an option</div>
+                        <label for="que6a"><input type="radio" name="que6" id="que6a" value="a) Becomes very dry and tight">
+                        a)
+                        Becomes very dry and tight</label><br>
+                    <label for="que6b"><input type="radio" name="que6" id="que6b" value="b) Stays relatively the same">
+                        b)
+                        Stays relatively the same</label><br>
+                    <label for="que6c"><input type="radio" name="que6" id="que6c" value="c) Becomes more oily"> c)
+                        Becomes
+                        more oily</label><br>
+                    <label for="que6d"><input type="radio" name="que6" id="que6d"
+                            value="d) Varies, dry in cold weather and oily in hot weather"> d) Varies, dry in cold
+                        weather
+                        and oily in hot weather</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>7. How often do you experience breakouts or acne?</legend>
+                    <div class="error-message">Please choose an option</div>
+                    <label for="que7a"><input type="radio" name="que7" id="que7a" value="a) Rarely or never"> a) Rarely
+                        or
+                        never</label><br>
+                    <label for="que7b"><input type="radio" name="que7" id="que7b" value="b) Occasionally"> b)
+                        Occasionally</label><br>
+                    <label for="que7c"><input type="radio" name="que7" id="que7c" value="c) Often"> c) Often</label><br>
+                    <label for="que7d"><input type="radio" name="que7" id="que7d"
+                            value="d) Frequently, especially in specific areas"> d) Frequently, especially in specific
+                        areas</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>8. How does your skin feel by the end of the day without any touch-ups?</legend>
+                    <div class="error-message">Please choose an option</div>
+                    <label for="que8a"><input type="radio" name="que8" id="que8a" value="a) Dry and possibly flaky"> a)
+                        Dry
+                        and possibly flaky</label><br>
+                    <label for="que8b"><input type="radio" name="que8" id="que8b"
+                            value="b) Normal, no significant changes">
+                        b) Normal, no significant changes</label><br>
+                    <label for="que8c"><input type="radio" name="que8" id="que8c" value="c) Very oily and shiny"> c)
+                        Very
+                        oily and shiny</label><br>
+                    <label for="que8d"><input type="radio" name="que8" id="que8d"
+                            value="d) Oily in some areas, dry in others"> d) Oily in some areas, dry in others</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>9. When you apply makeup, how well does it stay on throughout the day?</legend>
+                    <div class="error-message">Please choose an option</div>
+                    <label for="que9a"><input type="radio" name="que9" id="que9a"
+                            value="a) It often looks patchy or cakey">
+                        a) It often looks patchy or cakey</label><br>
+                    <label for="que9b"><input type="radio" name="que9" id="que9b" value="b) Stays on well"> b) Stays on
+                        well</label><br>
+                    <label for="que9c"><input type="radio" name="que9" id="que9c"
+                            value="c) Becomes shiny and needs blotting or powder"> c) Becomes shiny and needs blotting
+                        or
+                        powder</label><br>
+                    <label for="que9d"><input type="radio" name="que9" id="que9d"
+                            value="d) Wears off unevenly in different areas"> d) Wears off unevenly in different
+                        areas</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>10. How sensitive is your skin to new skincare products?</legend>
+                    <div class="error-message">Please choose an option</div>
+                    <label for="que10a"><input type="radio" name="que10" id="que10a"
+                            value="a) Very sensitive, reacts easily"> a) Very sensitive, reacts easily</label><br>
+                    <label for="que10b"><input type="radio" name="que10" id="que10b" value="b) Generally tolerant"> b)
+                        Generally tolerant</label><br>
+                    <label for="que10c"><input type="radio" name="que10" id="que10c" value="c) Rarely reacts"> c) Rarely
+                        reacts</label><br>
+                    <label for="que10d"><input type="radio" name="que10" id="que10d"
+                            value="d) Sensitive in some areas, tolerant in others"> d) Sensitive in some areas, tolerant
+                        in
+                        others</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>11. How does your skin feel in the morning before any skincare products are applied?
+                    </legend>
+                    <div class="error-message">Please choose an option</div>
+                    <label for="que11a"><input type="radio" name="que11" id="que11a" value="a) Dry and possibly tight">
+                        a)
+                        Dry and possibly tight</label><br>
+                    <label for="que11b"><input type="radio" name="que11" id="que11b" value="b) Normal"> b)
+                        Normal</label><br>
+                    <label for="que11c"><input type="radio" name="que11" id="que11c" value="c) Oily"> c)
+                        Oily</label><br>
+                    <label for="que11d"><input type="radio" name="que11" id="que11d"
+                            value="d) Dry in some areas, oily in others"> d) Dry in some areas, oily in others</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>12. Do you experience redness or irritation frequently?</legend>
+                    <div class="error-message">Please choose an option</div>
+                    <label for="que12a"><input type="radio" name="que12" id="que12a" value="a) Yes, often"> a) Yes,
+                        often</label><br>
+                    <label for="que12b"><input type="radio" name="que12" id="que12b" value="b) No, rarely"> b) No,
+                        rarely</label><br>
+                    <label for="que12c"><input type="radio" name="que12" id="que12c" value="c) Occasionally"> c)
+                        Occasionally</label><br>
+                    <label for="que12d"><input type="radio" name="que12" id="que12d" value="d) Only in certain areas">
+                        d)
+                        Only in certain areas</label>
+                </fieldset>
+
+                <section class="submit-button">
+                    <button class="quiz-submit" type="submit">SUBMIT!</button>
+                </section>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
 </body>
 
 </html>
