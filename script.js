@@ -1,92 +1,86 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const carouselTrack = document.querySelector('.carousel-track');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    const nextButton = document.querySelector('.next-button');
-    const startQuizButton = document.querySelector('.start-quiz-button');
-    const form = document.querySelector('.quiz');
+document.addEventListener('DOMContentLoaded', function () {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const navHeight = document.querySelector('header').offsetHeight;
+            const targetPosition = targetElement.offsetTop - navHeight;
 
-    let currentIndex = 0;
-
-    function moveToNextSlide(isNext = true) {
-        if (isNext && currentIndex < carouselItems.length - 1) {
-            carouselTrack.style.transform = `translateX(-${100 * (currentIndex + 1)}%)`;
-            carouselItems[currentIndex].classList.remove('active');
-            currentIndex++;
-            carouselItems[currentIndex].classList.add('active');
-        } else if (!isNext && currentIndex > 0) {
-            carouselTrack.style.transform = `translateX(-${100 * (currentIndex - 1)}%)`;
-            carouselItems[currentIndex].classList.remove('active');
-            currentIndex--;
-            carouselItems[currentIndex].classList.add('active');
-        }
-    }
-
-    function validateForm() {
-        let allAnswered = true;
-        const questions = form.querySelectorAll('fieldset');
-
-        questions.forEach(question => {
-            const options = question.querySelectorAll('input[type="radio"]');
-            const isAnswered = Array.from(options).some(option => option.checked);
-
-            if (!isAnswered) {
-                allAnswered = false;
-                question.classList.add('error');
-                question.querySelector('.error-message').style.display = 'block';
-            } else {
-                question.classList.remove('error');
-                question.querySelector('.error-message').style.display = 'none';
-            }
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
         });
-
-        return allAnswered;
-    }
-
-    function saveAnswers() {
-        const answers = {};
-        const questions = form.querySelectorAll('fieldset');
-
-        questions.forEach((question, index) => {
-            const selectedOption = question.querySelector('input[type="radio"]:checked');
-            answers[`question${index + 1}`] = selectedOption ? selectedOption.value : 'Not answered';
-        });
-
-        localStorage.setItem('userAnswers', JSON.stringify(answers));
-    }
-
-    function showResult() {
-        const resultSlide = document.createElement('section');
-        resultSlide.classList.add('carousel-item', 'result');
-        resultSlide.innerHTML = `
-            <h2>Your Quiz Result</h2>
-            <div class="result-content">
-                <p>Thank you for completing the quiz!</p>
-            </div>
-        `;
-        carouselTrack.appendChild(resultSlide);
-        carouselItems[currentIndex].classList.remove('active');
-        resultSlide.classList.add('active');
-    }
-
-    nextButton.addEventListener('click', () => moveToNextSlide(true));
-
-    const prevButton = document.createElement('button');
-    prevButton.textContent = 'Previous';
-    prevButton.classList.add('prev-button');
-    prevButton.addEventListener('click', () => moveToNextSlide(false));
-
-    startQuizButton.addEventListener('click', () => {
-        startQuizButton.parentElement.style.display = 'none';
-        moveToNextSlide(true);
-        document.querySelector('.quiz').insertAdjacentElement('beforebegin', prevButton);
     });
 
-    form.addEventListener('submit', event => {
-        event.preventDefault();
+    const carouselTrack = document.querySelector('.carousel-track');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const nextButtons = document.querySelectorAll('.start-quiz-button');
+    let currentIndex = 0;
 
-        if (validateForm()) {
-            saveAnswers();
-            showResult();
+    nextButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            currentIndex++;
+            if (currentIndex >= carouselItems.length) {
+                currentIndex = 0;
+            }
+            updateCarousel();
+        });
+    });
+
+    function updateCarousel() {
+        carouselTrack.style.transform = `translateX(-${currentIndex}%)`;
+        carouselItems.forEach((item, index) => {
+            if (index === currentIndex) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+
+    const form = document.querySelector('form');
+    const nameInput = document.querySelector('#name');
+    const emailInput = document.querySelector('#email');
+    const messageInput = document.querySelector('#message');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const errorMessages = form.querySelectorAll('.error-message');
+        errorMessages.forEach(message => message.remove());
+
+        let isValid = true;
+
+        if (nameInput.value.trim() === '') {
+            const nameError = document.createElement('div');
+            nameError.textContent = 'Please enter your name.';
+            nameError.classList.add('error-message');
+            nameInput.parentNode.appendChild(nameError);
+            isValid = false;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value.trim())) {
+            const emailError = document.createElement('div');
+            emailError.textContent = 'Please enter a valid email address.';
+            emailError.classList.add('error-message');
+            emailInput.parentNode.appendChild(emailError);
+            isValid = false;
+        }
+
+        if (messageInput.value.trim() === '') {
+            const messageError = document.createElement('div');
+            messageError.textContent = 'Please enter a message.';
+            messageError.classList.add('error-message');
+            messageInput.parentNode.appendChild(messageError);
+            isValid = false;
+        }
+
+        if (isValid) {
+            form.submit();
         }
     });
 });

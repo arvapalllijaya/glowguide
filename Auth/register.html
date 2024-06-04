@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - GlowGuide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Tangerine&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="register-page">
+        <header class="register-header">
+            <a href="../index.html" class="logo">
+                <img src="https://res.cloudinary.com/ddm5h6ev0/image/upload/v1716993845/WhatsApp_Image_2024-05-28_at_11.00.22_PM_rukl4c.jpg"
+                    alt="GlowGuide Logo" id="logo">
+                <h1>GlowGuide</h1>
+            </a>
+        </header>
+        <main class="register-box">
+            <h2>Create an Account</h2>
+            <form class="form" action="#" method="post">
+                <div class="name-group">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="email-number-group">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobilenumber">Mobile Number</label>
+                        <input type="tel" id="mobilenumber" name="mobilenumber" placeholder="Mobile Number" required>
+                    </div>
+                </div>
+                <div class="password-group">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmpassword">Confirm Password</label>
+                        <input type="password" id="confirmpassword" name="confirmpassword"
+                            placeholder="Confirm Password" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                        <input type="radio" id="others" name="gender" value="others" required>
+                        <label for="others">Others</label>
+                    </div>
+                </div>
+                <button type="submit" class="button">Register</button>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>
