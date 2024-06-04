@@ -270,23 +270,27 @@ textarea {
     margin-top: 1rem;
     font-size: 0.8rem;
 }
-.login{ 
+
+.login {
     font-family: "Sedan SC", serif;
-  }
+}
+
 /* Path: register.html */
 
-.register{
-  font-family: "Sedan SC", serif;
+.register {
+    font-family: "Sedan SC", serif;
 }
-.register-page{
-    
-        height: 100vh;
-        outline: auto;
-        text-align: center;
-        padding: 120px;
-        background-size: cover;
-        background-image: url(image.png);
+
+.register-page {
+
+    height: 100vh;
+    outline: auto;
+    text-align: center;
+    padding: 120px;
+    background-size: cover;
+    background-image: url(image.png);
 }
+
 .register-page .register-box {
     width: 320px;
     height: 420px;
@@ -303,6 +307,7 @@ textarea {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
+
 .register-box button {
     background-color: #ff69b4;
     color: #fff;
@@ -313,6 +318,7 @@ textarea {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 input[type="text"],
 input[type="text"],
 input[type="text"],
@@ -332,36 +338,88 @@ textarea {
 
 /* Path: quiz.html */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Satisfy&family=Sedan+SC&display=swap');
-.welcomes{
+
+/* Quiz Page Styles */
+.welcomes {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
 
-.quizpara{
+.quizpara {
     font-size: 15px;
-   text-align: center;
+    text-align: center;
 }
-.skinbutton{
+
+.skinbutton {
     text-align: center;
     text-decoration-color: #d85998;
 }
-.quizsubmit{
-    
+
+.quizsubmit {
     text-align: center;
 }
 
+/* Quiz Form Styles */
+.quiz fieldset {
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.quiz legend {
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+.quiz p {
+    margin-bottom: 10px;
+}
+
+.quiz label {
+    margin-left: 10px;
+}
+
+.quiz input[type="radio"] {
+    margin-right: 10px;
+}
+
+.quiz-submit {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quiz-submit:hover {
+    background-color: #ff1493;
+}
+
+@media (max-width: 768px) {
+    .landing-text h2 {
+        font-size: 2rem;
+    }
+
+    .landing-text button,
+    .quiz-submit {
+        width: 100%;
+    }
+}
+
 /* Path:firstpage.html */
-.firstpage{
+.firstpage {
     height: 100vh;
     background-color: black;
 }
-.weblogo{
+
+.weblogo {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-    
+
 }
-
-
-
-
