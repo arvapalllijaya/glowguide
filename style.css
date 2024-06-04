@@ -339,7 +339,17 @@ textarea {
 /* Path: quiz.html */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Satisfy&family=Sedan+SC&display=swap');
 
-/* Quiz Page Styles */
+.start-button h2 {
+    font-size: 1rem;
+    margin: 1rem auto;
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    display: inline-block;
+}
+
 .welcomes {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
@@ -360,6 +370,7 @@ textarea {
 }
 
 /* Quiz Form Styles */
+
 .quiz fieldset {
     max-width: 600px;
     width: 100%;
