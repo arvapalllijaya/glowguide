@@ -62,6 +62,11 @@ header button:hover {
     background-color: #ff1493;
 }
 
+header button a {
+    color: #fff;
+    text-decoration: none;
+}
+
 /* Main Content Styles */
 main {
     padding: 2rem;
@@ -241,7 +246,7 @@ textarea {
     color: #fff;
     border: none;
     padding: 0.8rem 1.5rem;
-    margin-top: ;
+    margin-top: 0.5rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -303,7 +308,7 @@ textarea {
     color: #fff;
     border: none;
     padding: 0.8rem 1.5rem;
-    margin-top: ;
+    margin-top: 0.5rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
