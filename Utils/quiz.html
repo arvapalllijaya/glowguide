@@ -23,7 +23,7 @@
                 <p>Take our skin type quiz to get started:</p>
                 <button class="start-quiz-button">Start Quiz &rightarrow;</button>
             </section>
-            <form class="carousel-item quiz" novalidate action="#">
+            <form class="carousel-item quiz" novalidate action="#" data>
                 <fieldset>
                     <legend>1. How does your skin feel after washing your face with a gentle cleanser?</legend>
                     <div class="error-message">Please choose an option</div>
@@ -189,6 +189,17 @@
                     <button class="quiz-submit" type="submit">SUBMIT!</button>
                 </section>
             </form>
+            <section class="carousel-item results">
+                <h2>Your skin type is: <span id="skin-type"></span></h2>
+                <p>Based on your answers, we have determined that your skin type is <span id="skin-type-result"></span>.
+                </p>
+                <p>Here are some skincare tips for your skin type:</p>
+                <ul id="skin-type-tips">
+                    <li>Tip 1</li>
+                    <li>Tip 2</li>
+                    <li>Tip 3</li>
+                </ul>
+            </section>
         </div>
     </div>
     <script src="../script.js"></script>

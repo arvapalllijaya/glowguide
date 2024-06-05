@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const nameInput = document.querySelector('#name');
     const emailInput = document.querySelector('#email');
     const messageInput = document.querySelector('#message');
+    const fieldsets = form.querySelectorAll('fieldset');
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -77,6 +78,23 @@ document.addEventListener('DOMContentLoaded', function () {
             messageInput.parentNode.appendChild(messageError);
             isValid = false;
         }
+
+        fieldsets.forEach(fieldset => {
+            const radioButtons = fieldset.querySelectorAll('input[type="radio"]');
+            let checked = false;
+            radioButtons.forEach(button => {
+                if (button.checked) {
+                    checked = true;
+                }
+            });
+            if (!checked) {
+                const errorMessage = document.createElement('div');
+                errorMessage.textContent = 'Please choose an option';
+                errorMessage.classList.add('error-message');
+                fieldset.appendChild(errorMessage);
+                isValid = false;
+            }
+        });
 
         if (isValid) {
             form.submit();
