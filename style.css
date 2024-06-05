@@ -327,6 +327,7 @@ footer a:hover {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
+    border-radius: 10px;
 }
 
 .login-header .logo {
@@ -371,7 +372,7 @@ footer a:hover {
 .login-box h2 {
     font-family: 'Tangerine', cursive;
     font-size: 2.5em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #9B6A6A;
     text-align: center;
 }
@@ -439,9 +440,10 @@ footer a:hover {
 /* Register Page Styles */
 .register-page {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 40px;
     min-height: 100vh;
     background-color: #FEFCF3;
     color: #4F3D3D;
@@ -451,6 +453,7 @@ footer a:hover {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
+    border-radius: 10px;
 }
 
 .register-header .logo {
@@ -494,7 +497,7 @@ footer a:hover {
 
 .register-box .name-group,
 .register-box .email-number-group,
-.register-box .password-group{
+.register-box .password-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -566,6 +569,19 @@ footer a:hover {
     color: #FEFCF3;
 }
 
+.register-box p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.register-box p a {
+    color: #9B6A6A;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
 /* Carousel Styles */
 .carousel-container {
     width: 100%;
@@ -577,7 +593,7 @@ footer a:hover {
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-track .intro{
+.carousel-track .intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -594,7 +610,10 @@ footer a:hover {
     margin-top: 20px;
 }
 
-.carousel-track .intro button {
+.carousel-track .intro button,
+.next-button,
+.prev-button,
+.home-button {
     background-color: #E8C4C4;
     color: #4F3D3D;
     padding: 15px 30px;
@@ -633,6 +652,50 @@ footer a:hover {
     min-height: 100vh;
     background-color: #FEFCF3;
     color: #4F3D3D;
+    padding: 40px 10vw 10vh 5vw;
+    transform: translateX(20px);
+}
+
+.quiz .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: #4F3D3D;
+}
+
+.quiz .quiz-header button {
+    margin-bottom: 65px;
+}
+
+.quiz h2 {
+    font-family: 'Tangerine', cursive;
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #9B6A6A;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.quiz h2:hover {
+    color: #4F3D3D;
+}
+
+.quiz h2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: 4px;
+    background-color: #9B6A6A;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.quiz h2:hover:before {
+    transform: translateX(-50%) scaleX(1);
 }
 
 .quiz fieldset {
@@ -687,6 +750,24 @@ footer a:hover {
     color: #FEFCF3;
 }
 
+.quiz .start-quiz-button {
+    background-color: #E8C4C4;
+    color: #4F3D3D;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.quiz .start-quiz-button:hover {
+    background-color: #9B6A6A;
+    color: #FEFCF3;
+}
+
 /* Results Styles */
 .results {
     display: flex;
@@ -710,8 +791,13 @@ footer a:hover {
 }
 
 .results ul {
-    list-style: disc;
-    padding: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.results ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 /* Media Queries */
@@ -809,6 +895,10 @@ footer a:hover {
     }
 
     /* Quiz Styles */
+    .quiz h2 {
+        font-size: 2.5em;
+    }
+
     .quiz legend {
         font-size: 1.2em;
     }
@@ -836,15 +926,69 @@ footer a:hover {
     .results ul {
         padding-left: 20px;
     }
+
+    .results ul li {
+        font-size: 1em;
+    }
 }
 
 @media screen and (max-width: 576px) {
-    header h1 {
-        font-size: 2.5em;
+    header {
+        padding: 20px;
     }
 
     header #logo {
         height: 50px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header nav ul {
+        font-size: 1em;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    header nav ul li a {
+        font-size: 0.9em;
+    }
+
+    header .auth-buttons a {
+        font-size: 0.9em;
+    }
+
+    header .auth-buttons .button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    main section {
+        margin: 20px 0;
+    }
+
+    main .landing-part .landing-text,
+    main .about-part .about-text,
+    main .services-part .services-text,
+    main .landing-part .landing-image,
+    main .about-part .about-image,
+    main .services-part .services-image {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    main .landing-part .landing-text,
+    main .about-part .about-text,
+    main .services-part .services-text {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 
     main .landing-part .landing-text h2,
@@ -859,12 +1003,44 @@ footer a:hover {
         font-size: 1em;
     }
 
+    main .landing-part .landing-text a,
+    main .about-part .about-text a,
+    main .services-part .services-text a {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+
+    main .landing-part .landing-image img,
+    main .about-part .about-image img,
+    main .services-part .services-image img {
+        max-height: 70vh;
+    }
+
+    main .contact-part {
+        margin-top: 40px;
+    }
+
     .contact-form {
         padding: 20px;
     }
 
     .contact-form h2 {
         font-size: 2em;
+    }
+
+    .contact-form form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form .form-group1,
+    .contact-form .form-group2 {
+        grid-column: auto;
+        margin: 0;
+    }
+
+    .contact-form button {
+        grid-column: auto;
+        margin-top: 20px;
     }
 
     .contact-form input,
@@ -935,6 +1111,10 @@ footer a:hover {
     }
 
     /* Quiz Styles */
+    .quiz h2 {
+        font-size: 2em;
+    }
+
     .quiz label {
         font-size: 0.9em;
         margin-left: 10px;
@@ -957,5 +1137,9 @@ footer a:hover {
 
     .results ul {
         padding-left: 15px;
+    }
+
+    .results ul li {
+        font-size: 0.9em;
     }
 }

@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h1 class="welcome-message">Welcome, username!</h1>
+        <h1 class="welcome-message">Welcome, #username#!</h1>
         <a href="../index.html"><img
                 src="https://res.cloudinary.com/ddm5h6ev0/image/upload/v1716993845/WhatsApp_Image_2024-05-28_at_11.00.22_PM_rukl4c.jpg"
                 alt="GlowGuide Logo" id="logo"></a>
@@ -23,7 +23,13 @@
                 <p>Take our skin type quiz to get started:</p>
                 <button class="start-quiz-button">Start Quiz &rightarrow;</button>
             </section>
-            <form class="carousel-item quiz" novalidate action="#" data>
+            <form class="carousel-item quiz" novalidate action="#">
+                <section class="quiz-header">
+                    <button class="prev-button">&leftarrow; Previous</button>
+                    <h2>Discover Your Skin Type</h2>
+                    <button class="start-quiz-button next-button">Next &rightarrow;</button>
+                </section>
+
                 <fieldset>
                     <legend>1. How does your skin feel after washing your face with a gentle cleanser?</legend>
                     <div class="error-message">Please choose an option</div>
@@ -190,8 +196,8 @@
                 </section>
             </form>
             <section class="carousel-item results">
-                <h2>Your skin type is: <span id="skin-type"></span></h2>
-                <p>Based on your answers, we have determined that your skin type is <span id="skin-type-result"></span>.
+                <h2>Your skin type is: <span id="skin-type">#skin-type#</span></h2>
+                <p>Based on your answers, we have determined that your skin type is <span id="skin-type-result">#skin-type#</span>.
                 </p>
                 <p>Here are some skincare tips for your skin type:</p>
                 <ul id="skin-type-tips">
@@ -199,6 +205,7 @@
                     <li>Tip 2</li>
                     <li>Tip 3</li>
                 </ul>
+                <button class="home-button">Back to Home</button>
             </section>
         </div>
     </div>
