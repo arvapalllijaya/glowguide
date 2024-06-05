@@ -5,36 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GlowGuide</title>
+    <meta name="description" content="GlowGuide: Get expert skincare advice tailored to your skin type.">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <img src="https://res.cloudinary.com/ddm5h6ev0/image/upload/v1716993845/WhatsApp_Image_2024-05-28_at_11.00.22_PM_rukl4c.jpg" alt="GlowGuide Logo">
+        <a href="index.html"><img
+                src="https://res.cloudinary.com/ddm5h6ev0/image/upload/v1716993845/WhatsApp_Image_2024-05-28_at_11.00.22_PM_rukl4c.jpg"
+                alt="GlowGuide Logo" id="logo"></a>
         <h1>GlowGuide</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#about-part">About</a></li>
+                <li><a href="#services-part">Services</a></li>
+                <li><a href="#contact-part">Contact</a></li>
             </ul>
         </nav>
-        <button>Login</button>
-        <button>Sign Up</button>
+        <div class="auth-buttons">
+            <a href="Auth/login.html" class="button">Login</a>
+            <a href="Auth/register.html" class="button">Sign Up</a>
+        </div>
     </header>
     <main>
-        <div class="landing-part">
+        <section class="landing-part">
             <div class="landing-text">
                 <h2>Get the best skincare advice from the experts</h2>
-                <p>Our team of experts will help you get the best skincare routine for your skin type</p>
-                <button>Get Started</button>
+                <p>Our team of experts will help you get the best skincare routine for your skin type.</p>
+                <a href="Utils/quiz.html" class="button">Get Started</a>
             </div>
             <div class="landing-image">
-                <img src="images/landing-image.jpg" alt="Landing Image">
+                <img src="https://res.cloudinary.com/ddm5h6ev0/image/upload/v1716993845/WhatsApp_Image_2024-05-28_at_11.00.22_PM_rukl4c.jpg"
+                    alt="Person receiving skincare advice">
             </div>
-        </div>
-        <div class="about-part">
+        </section>
+        <section class="about-part" id="about-part">
             <div class="about-text">
                 <h2>About Us</h2>
                 <p>Our team of experts will help you get the best skincare routine for your skin type. We have a team of
@@ -44,10 +50,11 @@
                     skincare and beauty. We will help you get the best skincare routine for your skin type.</p>
             </div>
             <div class="about-image">
-                <img src="images/about-image.jpg" alt="About Image">
+                <img src="https://res.cloudinary.com/ddm5h6ev0/image/upload/v1716993845/WhatsApp_Image_2024-05-28_at_11.00.22_PM_rukl4c.jpg"
+                    alt="About GlowGuide team">
             </div>
-        </div>
-        <div class="services-part">
+        </section>
+        <section class="services-part" id="services-part">
             <div class="services-text">
                 <h2>Our Services</h2>
                 <p>Our team of experts will help you get the best skincare routine for your skin type. We have a team of
@@ -57,24 +64,36 @@
                     skincare and beauty. We will help you get the best skincare routine for your skin type.</p>
             </div>
             <div class="services-image">
-                <img src="images/services-image.jpg" alt="Services Image">
+                <img src="https://res.cloudinary.com/ddm5h6ev0/image/upload/v1716993845/WhatsApp_Image_2024-05-28_at_11.00.22_PM_rukl4c.jpg"
+                    alt="Skincare services">
             </div>
-        </div>
-        <div class="contact-part">
+        </section>
+        <section class="contact-part" id="contact-part">
             <div class="contact-form">
                 <h2>Contact Us</h2>
-                <form action="">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                    <button>Send</button>
+                <form action="#" method="post">
+                    <div class="form-group1">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group2">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group3">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" cols="30" rows="10" placeholder="Message"
+                            required></textarea>
+                    </div>
+                    <button type="submit">Send</button>
                 </form>
             </div>
-        </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 GlowGuide. All Rights Reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
